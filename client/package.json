@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -13,6 +13,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@capacitor/android": "^5.7.4",
+    "@capacitor/cli": "^5.7.4",
+    "@capacitor/core": "^5.7.4",
+    "@ionic/vue": "^7.8.1",
+    "@ionic/vue-router": "^7.8.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
