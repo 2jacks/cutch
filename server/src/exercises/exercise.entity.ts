@@ -1,24 +1,23 @@
-import { Muscle } from 'src/muscle/muscle.entity';
+import { User } from 'src/users/user.entity';
+import { Muscle } from 'src/muscles/muscle.entity';
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
-  OneToMany,
-  ManyToMany,
-  JoinTable
+  ObjectIdColumn,
+  ObjectId
 } from 'typeorm';
 
 @Entity()
 export class Exercise {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @ObjectIdColumn()
+  id: ObjectId;
 
   @Column()
   name: string;
 
-  @ManyToMany(() => Muscle)
-  @JoinTable()
-  muscles: number[];
+  @Column()
+  description: string;
 
   @Column()
   icon: string;
